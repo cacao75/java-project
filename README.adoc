@@ -1,0 +1,27 @@
+= Hands-on Reference on Java Programming
+Ikhoon Chon <darkchoco@cloudscape.kr>
+:toc:
+
+== 내용
+보다 세부적인 내용은 개인 위키 참조.
+
+* classical-computer-science-problems
+** Hands-on 'Classic Computer Science Problems in Java (2020)'
+
+* ex
+** 다양한 예제 및 실습코드를 포함한다.
+** 포함된 내용
+*** bitset
+
+* logging
+** https://www.baeldung.com/logback[A Guide To Logback]
+
+== 방법
+Unit Testing 을 적극 활용한다.  +
+https://www.baeldung.com/java-unit-testing-best-practices[Best Practices For Unit Testing In Java] 참조.
+
+== Reference
+아래 서적들에 사용된 코드를 일부 포함하며 그 내용도 원본과 상당히 차이가 있을 수 있다.
+
+* Classic Computer Science Problems in Java (2020)
+** https://github.com/davecom/ClassicComputerScienceProblemsInJava
