@@ -9,6 +9,8 @@
     <description>Projects related to Java Programming</description>
 
     <modules>
+        <module>classical-computer-science-problems/small-problems</module>
+        <module>ex</module>
         <module>logging</module>
     </modules>
 </project>
