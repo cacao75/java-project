@@ -6,10 +6,12 @@ import lombok.Getter;
 public class PrinterProxy implements Printable {
 
     private String printerName;
-    private Printer printer;
+    private Printable printer;  // Printer 타입이 아니라 Printable 타입이다
+    private final String printerClassName;
 
-    public PrinterProxy(String printerName) {
+    public PrinterProxy(String printerName, String printerClassName) {
         this.printerName = printerName;
+        this.printerClassName = printerClassName;
     }
 
     @Override
@@ -27,7 +29,16 @@ public class PrinterProxy implements Printable {
     }
 
     private void realize() {
-        if (printer == null)
-            printer = new Printer(printerName);
+        if (printer == null) {
+            try {
+                // https://stackoverflow.com/a/46393897
+                printer = (Printable)Class.forName(printerClassName).getDeclaredConstructor().newInstance();
+                printer.setPrinterName(printerName);
+            } catch (ClassNotFoundException e) {
+                System.err.println("Class " + printerClassName + " doesn't exist");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
