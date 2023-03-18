@@ -14,8 +14,9 @@ public class PrinterProxy implements Printable {
         this.printerClassName = printerClassName;
     }
 
+    // printer object 유무 판단이 다수의 Thread 실행시 오류가 날 수 있기 때문에 synchronized 로 '보호'한다
     @Override
-    public void setPrinterName(String name) {
+    public synchronized void setPrinterName(String name) {
         if (printer != null)
             printer.setPrinterName(name);
 
@@ -28,7 +29,8 @@ public class PrinterProxy implements Printable {
         printer.print(str);
     }
 
-    private void realize() {
+    // 여기서도 printer object 유무 판단이 있기 때문에 synchronized를 추가한다
+    private synchronized void realize() {
         if (printer == null) {
             try {
                 // https://stackoverflow.com/a/46393897
