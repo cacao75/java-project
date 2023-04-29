@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class StreamExamples {
+public class StreamExample {
 
     public static void main(String[] args) {
         // https://stackoverflow.com/questions/409784/whats-the-simplest-way-to-print-a-java-array
