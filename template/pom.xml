@@ -1,12 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- parent가 필요시 적절히 수정한다 -->
+    <!-- parent가 필요할 경우 적절히 수정한다 -->
     <parent>
-        <groupId>io.github.darkchoco.java</groupId>
-        <artifactId>classical-computer-science-problems</artifactId>
+        <groupId>io.github.darkchoco</groupId>
+        <artifactId>java-project</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath></relativePath>
+<!--        <relativePath></relativePath>-->
     </parent>
     <!-- 아래 4줄 수정 -->
     <artifactId>template</artifactId>
@@ -18,25 +18,26 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
+        <junit.version>5.10.1</junit.version>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
-            <version>5.9.2</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.9.2</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
-            <version>5.9.2</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -48,7 +49,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.6</version>
+            <version>1.4.14</version>
         </dependency>
     </dependencies>
 
