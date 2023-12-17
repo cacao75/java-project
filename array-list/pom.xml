@@ -1,18 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- parent가 필요할 경우 적절히 수정한다 -->
-    <parent>
-        <groupId>io.github.darkchoco.java</groupId>
-        <artifactId>java-project</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-<!--        <relativePath></relativePath>-->
-    </parent>
-    <!-- 아래 4줄 수정 -->
-    <artifactId>template</artifactId>
+    <groupId>io.github.darkchoco.java</groupId>
+    <artifactId>array-list</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>template</name>
-    <description>Basic template</description>
+    <name>array-list</name>
+    <description>Array, List, etc.</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
