@@ -6,7 +6,8 @@
         <groupId>io.github.darkchoco.java</groupId>
         <artifactId>java-project</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-<!--        <relativePath></relativePath>-->
+        <!-- Depth 변경시 아래 상대경로를 적절히 수정한다 -->
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <!-- 아래 4줄 수정 -->
     <artifactId>template</artifactId>
@@ -18,7 +19,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>17</java.version>
-        <junit.version>5.10.1</junit.version>
+        <junit.version>5.10.2</junit.version>
     </properties>
 
     <dependencies>
@@ -43,7 +44,7 @@
         <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version>
+            <version>3.25.3</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -56,8 +57,9 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.11.0</version>
+                <version>3.12.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
