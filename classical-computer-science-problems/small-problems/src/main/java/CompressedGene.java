@@ -1,7 +1,7 @@
 import java.util.BitSet;
 
 /**
- * Constructor의 인자를 통해 들어온 Gene 값을 BitSet 로 바꾸어 Class 내부에 length와 같이 저장한다.
+ * Constructor의 인자를 통해 들어온 Gene 값을 BitSet로 바꾸어 Class 내부에 length와 같이 저장한다.
  */
 public class CompressedGene {
 
@@ -55,7 +55,8 @@ public class CompressedGene {
         for (int i = 0; i < (length * 2); i += 2) {
             final int firstBit = (bitSet.get(i) ? 1 : 0);
             final int secondBit = (bitSet.get(i + 1) ? 1 : 0);
-            // int 형인 firstBit를 이진수로 바꿔서 왼쪽으로 비트 이동한 다음 secondBit 와 | 논리연산을 한다.
+            // firstBit를 왼쪽으로 1비트 이동하면 이동한 자리는 0으로 채워진다. 이후 secondBit 와 | 논리연산을 하면
+            // 결국 0과 OR 연산을 하게 되므로 항상 secondBit 값이 나오게 된다.
             final int result = firstBit << 1 | secondBit;
             switch (result) {
                 // binary literal로 구분하자.
