@@ -1,7 +1,10 @@
 package darkchoco.bycomparison.favor_enum.solution;
 
+import lombok.Getter;
+
 import java.util.Objects;
 
+@Getter
 class CruiseControl {
 
     private double targetSpeedKmh;
@@ -31,7 +34,7 @@ enum SpeedPreset {
 class Main {
 
     static void usage() {
-        CruiseControl cruiseControl = null;
+        CruiseControl cruiseControl = new CruiseControl();
         cruiseControl.setPreset(SpeedPreset.PLANETARY_SPEED);
         cruiseControl.setPreset(SpeedPreset.CRUISE_SPEED);
     }

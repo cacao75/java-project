@@ -18,24 +18,28 @@ class CruiseControlTest {
     void testSetPreset_Stop() {
         cruiseControl.setPreset(SpeedPreset.STOP);
         assertEquals(0, getTargetSpeedKmh(), "STOP 프리셋을 설정한 후 속도는 0이어야 합니다.");
+        assertEquals(0, cruiseControl.getTargetSpeedKmh(), "STOP 프리셋을 설정한 후 속도는 0이어야 합니다.");
     }
 
     @Test
     void testSetPreset_PlanetarySpeed() {
         cruiseControl.setPreset(SpeedPreset.PLANETARY_SPEED);
         assertEquals(7667, getTargetSpeedKmh(), "PLANETARY_SPEED 프리셋을 설정한 후 속도는 7667이어야 합니다.");
+        assertEquals(7667, cruiseControl.getTargetSpeedKmh(), "PLANETARY_SPEED 프리셋을 설정한 후 속도는 7667이어야 합니다.");
     }
 
     @Test
     void testSetPreset_CruiseSpeed() {
         cruiseControl.setPreset(SpeedPreset.CRUISE_SPEED);
         assertEquals(16944, getTargetSpeedKmh(), "CRUISE_SPEED 프리셋을 설정한 후 속도는 16944이어야 합니다.");
+        assertEquals(16944, cruiseControl.getTargetSpeedKmh(), "CRUISE_SPEED 프리셋을 설정한 후 속도는 16944이어야 합니다.");
     }
 
     @Test
     void testSetTargetSpeedKmh() {
         cruiseControl.setTargetSpeedKmh(5000);
         assertEquals(5000, getTargetSpeedKmh(), "직접 속도를 설정한 경우 5000이어야 합니다.");
+        assertEquals(5000, cruiseControl.getTargetSpeedKmh(), "직접 속도를 설정한 경우 5000이어야 합니다.");
     }
 
     @Test
